@@ -1,0 +1,238 @@
+local druid = require("druid.druid")
+local data = require("scripts.modules.data")
+
+local function finish_raffle()
+    for i = 1, #data.raffle.balls_nodes do
+        gui.delete_node(data.raffle.balls_nodes[i])
+    end
+    data.raffle.balls_nodes = {}
+    gui.set_enabled(data.screen.raffle, false)
+end
+local function update_prize_cards()
+    local cards = data.get_cards_info()
+    data.prize_cards_info = {
+        {cards[1], cards[2], cards[3]},
+        {cards[4], cards[5]},
+        {cards[6]},
+    }
+end
+local function update_first_cards()
+    for i = 1, #data.raffle.cards do
+        data.update_card(data.raffle.cards[i], data.get_cards_info()[i])
+    end
+    
+end
+
+local function init_first_cards()
+    local prefab = gui.get_node("border")
+    local cards = {}
+    for i = 1, 4 do
+        cards[i] = gui.clone_tree(prefab)
+        gui.set_enabled(cards[i]["prize_card/border"], true)
+        gui.set_parent(cards[i]["prize_card/border"], data.screen.raffle)
+        gui.set_scale(cards[i]["prize_card/background"], vmath.vector3(0.5550000071525574,0.5550000071525574, 1))
+    end
+    gui.set_position(cards[1]["prize_card/border"],vmath.vector3(-810.5, -91, 0))
+    gui.set_position(cards[2]["prize_card/border"],vmath.vector3(-540, -91, 0))
+    gui.set_position(cards[3]["prize_card/border"],vmath.vector3(-810.5, -380.5, 0))
+    gui.set_position(cards[4]["prize_card/border"],vmath.vector3(-540, -380.5, 0))
+    data.raffle.cards = cards
+end
+
+local function update_coupon(coupon, info)
+    gui.set_text(coupon["coupon_info/id"], info.id)
+    gui.set_text(coupon["coupon_info/donor"], info.title)
+    local last = {}
+    for k, v in pairs(info.nums) do
+        if not v[2] then table.insert(last, v[1]) end
+    end
+    for i = 1, 5 do
+        if i > #last then
+            gui.set_enabled(coupon["coupon_info/box"..i], false)
+        else
+            gui.set_enabled(coupon["coupon_info/box"..i], true)
+            gui.set_text(coupon["coupon_info/text"..i], last[i])
+        end
+    end
+
+end
+
+local function update_coupon_board(self)
+    local coupons_info = data.get_cards_info()
+    local coupons_quant = #coupons_info
+    local coupons = data.get_coupons()
+    local coupons_aux
+    if coupons_quant > 10 then coupons_quant = 10 end
+    if #coupons > coupons_quant then
+        local remove = #coupons - coupons_quant
+        local node
+        for i = 1, remove do
+            node = data.raffle.board_coup_info_grid:remove(i)
+            coupons_aux = data.get_coupons()
+            for k, v in pairs(coupons_aux) do
+                table.remove(coupons_aux, k)
+            end
+            gui.delete_node(node)
+        end
+    elseif #coupons < coupons_quant then
+        local prefab = gui.get_node("coupon_info/pivot")
+        local coupons_aux = data.get_coupons()
+        local add =  coupons_quant - #coupons
+        for i = 1, add do
+            local clone = gui.clone_tree(prefab)
+            gui.set_enabled(clone["coupon_info/pivot"], true)
+            data.raffle.board_coup_info_grid:add(clone["coupon_info/pivot"])
+            table.insert(coupons_aux, clone)
+        end
+        data.set_coupons(coupons_aux)
+    end
+    
+    coupons = data.get_coupons()
+    for i = 1, #coupons do
+        update_coupon(coupons[i], coupons_info[i])
+    end
+    --atualizar coupons
+end
+local function update_cards_list()
+    local cards = data.get_cards_info()
+    local balls = data.get_balls()
+    for i = 1, #cards do
+        for c = 1, 15 do
+            if cards[i].nums[c][1] == balls[data.sequence] then
+                cards[i].nums[c][2] = true
+            end
+        end
+    end
+    table.sort(cards, function(a,b)
+        local al, bl = 0,0
+        for i = 1, 15 do
+            if a.nums[i][2] then
+                al = al + 1
+            end
+            if b.nums[i][2] then
+                bl = bl + 1
+            end
+        end
+        return al > bl
+    end)
+    
+    data.set_cards_info(cards)
+end
+
+local function pick_ball()
+    local balls_grid = gui.get_node("ball_board_grid")
+    local balls = {
+        gui.get_node("main_ball"),
+        gui.get_node("ball1"),
+        gui.get_node("ball2"),
+        gui.get_node("ball3"),
+    }
+    data.sequence = data.sequence + 1
+    gui.set_text(gui.get_node("order_numb"),string.format("%02d", data.sequence))   
+    local n = data.get_balls()[data.sequence]
+    if data.sequence < 5 then gui.set_enabled(balls[data.sequence], true) end
+    local ball
+
+    gui.play_flipbook(balls[4], gui.get_flipbook(balls[3]))
+    gui.play_flipbook(balls[3], gui.get_flipbook(balls[2]))
+    gui.play_flipbook(balls[2], gui.get_flipbook(balls[1]))
+    gui.play_flipbook(balls[1], "" .. n)
+
+    ball = gui.new_box_node(vmath.vector3(((n-1 - (math.floor((n-1)/18) * 18))) * 73.2, (4 - math.floor((n-1)/18)) * 81, 0), vmath.vector3(0))
+    gui.set_size_mode(ball, gui.SIZE_MODE_AUTO)
+    gui.set_texture(ball, "balls")
+    gui.play_flipbook(ball, "" .. n)
+    gui.set_scale(ball, vmath.vector3(0.3199999928474426))
+    gui.set_parent(ball, balls_grid)
+    table.insert(data.raffle.balls_nodes, ball)
+end
+local function generete_data()
+    local cards_info = {}
+    local in_use = {}
+
+    for i = 1, 15 do
+        local card = {
+            title = "DONOR "..i,
+            id = string.format("%05d", i),
+            value = 0,
+            nums = {}
+        }
+        in_use = {}
+        for c = 1, 15 do
+            local n
+            repeat
+                n = math.random(1, 90)
+            until in_use[n] == nil
+            in_use[n] = true
+            table.insert(card.nums, {n, false})
+        end
+        table.insert(cards_info, card)
+    end
+    data.set_cards_info(cards_info)
+    
+    in_use = {}
+    local balls = {}
+    for c = 1, 60 do
+        local n
+        repeat
+            n = math.random(1, 90)
+        until in_use[n] == nil
+        in_use[n] = true
+        table.insert(balls, n)
+    end
+    data.set_balls(balls)
+end
+
+local function init_raffle_screen(self)
+    generete_data()
+    gui.set_enabled(data.screen.raffle, true)
+    data.sequence = 0
+
+    update_coupon_board(self)
+    update_first_cards()
+
+    timer.delay(0.25, true, function (s,h)
+        if data.sequence == 12 then
+            timer.delay(1, false, function ()
+                update_prize_cards()
+                msg.post("/Raffle#4-prize_cards", "init", {})
+            end)
+            timer.cancel(h)
+        else
+            pick_ball()
+            update_cards_list()
+            update_coupon_board(self)
+            update_first_cards()
+        end
+    end, true, 1)
+    
+end
+
+function init(self)
+    math.randomseed(os.time())
+    self.druid = druid.new(self)
+    data.screen.raffle = gui.get_node("raffle")
+    data.raffle.board_coup_info_grid = self.druid:new_static_grid("board_coup_info_grid", gui.get_node("coupon_info/pivot"), 1)
+    data.raffle.board_coup_info_grid.style.IS_DYNAMIC_NODE_POSES = true
+    init_first_cards()
+    init_raffle_screen()
+end
+
+function final(self)
+    self.druid:final()
+end
+
+function update(self, dt)
+    self.druid:update(dt)
+end
+
+function on_message(self, message_id, message, sender)
+    self.druid:on_message(message_id, message, sender)
+    if message_id == hash("init") then init_raffle_screen(self) end
+    if message_id == hash("finish") then finish_raffle() end
+end
+
+function on_input(self, action_id, action)
+    return self.druid:on_input(action_id, action)
+end
+

@@ -1,0 +1,62 @@
+local druid = require("druid.druid")
+local data = require("scripts.modules.data")
+
+local function finish_prize_cards(self)
+    for i = 1, #data.prize_coupons do
+        for c = 1, #data.prize_coupons[i].nodes do
+            gui.delete_node(data.prize_coupons[i].nodes[c])
+        end
+        data.prize_coupons[i]:clear()
+        self.druid:remove(data.prize_coupons[i])
+    end
+    gui.set_enabled(data.screen.prize_cards, false)
+end
+
+local function update_winners_coupons(self)
+    local coupons = data.prize_cards_info
+    for i = 1, #coupons do
+        for k, v in pairs(coupons[i]) do
+            local clone = gui.clone_tree(gui.get_node("winner"))
+            gui.set_enabled(clone["winner"], true)
+            gui.set_text(clone["title"], v["title"])
+            gui.set_text(clone["id"], v["id"])
+            data.prize_coupons[i]:add(clone["winner"])
+        end
+    end
+end
+
+local function init_prizes_screen(self)
+    data.screen.prize_cards = gui.get_node("prizes")
+    gui.set_enabled(data.screen.prize_cards, true)
+    data.prize_coupons = {
+        self.druid:new_static_grid("prize_1/grid", gui.get_node("winner"), 1),
+        self.druid:new_static_grid("prize_2/grid", gui.get_node("winner"), 1),
+        self.druid:new_static_grid("prize_3/grid", gui.get_node("winner"), 1),
+    }
+    update_winners_coupons(self)
+
+     --###################
+    timer.delay(3, false, function ()
+        finish_prize_cards(self)
+        msg.post("/Raffle#2-next_raffle", "init")
+    end)
+    --####################
+end
+
+function init(self)
+    self.druid = druid.new(self)
+    --init_prizes_screen(self)
+end
+
+function final(self)
+    self.druid:final()
+end
+
+function on_message(self, message_id, message, sender)
+    self.druid:on_message(message_id, message, sender)
+    if message_id == hash("init") then init_prizes_screen(self) end
+end
+
+function on_input(self, action_id, action)
+    return self.druid:on_input(action_id, action)
+end

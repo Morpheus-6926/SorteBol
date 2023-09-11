@@ -1,0 +1,2520 @@
+script: ""
+fonts {
+  name: "futura_md_bt_32"
+  font: "/assets/fonts/futura_md_bt_32.font"
+}
+fonts {
+  name: "futura_md_bt_29"
+  font: "/assets/fonts/futura_md_bt_29.font"
+}
+fonts {
+  name: "bebas_kai_60_copy"
+  font: "/assets/fonts/bebas_kai_68.font"
+}
+textures {
+  name: "boards"
+  texture: "/assets/atlas/boards.atlas"
+}
+textures {
+  name: "titles"
+  texture: "/assets/atlas/titles.atlas"
+}
+background_color {
+  x: 0.0
+  y: 0.0
+  z: 0.0
+  w: 0.0
+}
+nodes {
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 440.0
+    y: 920.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_BOX
+  blend_mode: BLEND_MODE_ALPHA
+  texture: "boards/quadro_cartela_premiada"
+  id: "board"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_N
+  adjust_mode: ADJUST_MODE_FIT
+  layer: ""
+  inherit_alpha: true
+  slice9 {
+    x: 32.0
+    y: 30.0
+    z: 34.0
+    w: 32.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
+  alpha: 1.0
+  template_node_child: false
+  size_mode: SIZE_MODE_MANUAL
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 0.0
+    y: -5.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_TEMPLATE
+  id: "prize"
+  parent: "board"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template: "/gui/templates/small_prize_board.gui"
+  template_node_child: false
+  custom_type: 0
+  enabled: true
+}
+nodes {
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 300.0
+    y: 120.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  type: TYPE_BOX
+  blend_mode: BLEND_MODE_ALPHA
+  texture: ""
+  id: "prize/board"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize"
+  layer: ""
+  inherit_alpha: true
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
+  alpha: 1.0
+  overridden_fields: 45
+  overridden_fields: 46
+  template_node_child: true
+  size_mode: SIZE_MODE_MANUAL
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_BOX
+  blend_mode: BLEND_MODE_ALPHA
+  texture: "boards/quadro_titulo_premio"
+  id: "prize/frame"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/board"
+  layer: ""
+  inherit_alpha: true
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
+  alpha: 1.0
+  overridden_fields: 46
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 0.0
+    y: 63.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx1"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 22.0
+    y: 63.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx2"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 45.0
+    y: 63.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx3"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 68.0
+    y: 63.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx4"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 90.0
+    y: 63.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx5"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 113.0
+    y: 63.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx6"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 136.0
+    y: 62.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx7"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 151.0
+    y: 50.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx8"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 154.0
+    y: 31.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx9"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 154.0
+    y: 11.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx10"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 154.0
+    y: -10.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx11"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 154.0
+    y: -30.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx12"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 151.0
+    y: -50.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx13"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 136.0
+    y: -61.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx14"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 113.0
+    y: -61.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx15"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 90.0
+    y: -61.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx16"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 68.0
+    y: -61.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx17"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 45.0
+    y: -61.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx18"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 22.0
+    y: -61.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx19"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 0.0
+    y: -61.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx20"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: -23.0
+    y: -61.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx21"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: -45.0
+    y: -61.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx22"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: -68.0
+    y: -61.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx23"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: -91.0
+    y: -61.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx24"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: -113.0
+    y: -61.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx25"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: -136.0
+    y: -61.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx26"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: -151.0
+    y: -50.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx27"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: -154.0
+    y: -30.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx28"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: -154.0
+    y: -10.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx29"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: -154.0
+    y: 11.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx30"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: -154.0
+    y: 31.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx31"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: -151.0
+    y: 50.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx32"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: -136.0
+    y: 62.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx33"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: -113.0
+    y: 63.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx34"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: -91.0
+    y: 63.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx35"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: -68.0
+    y: 63.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx36"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: -45.0
+    y: 63.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx37"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: -23.0
+    y: 63.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PARTICLEFX
+  id: "prize/particlefx38"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/frame"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  particlefx: "light_2"
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 0.0
+    y: -3.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_TEXT
+  blend_mode: BLEND_MODE_ALPHA
+  text: "R$ 350,00"
+  font: "bebas_kai_60"
+  id: "prize/value"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  outline {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  adjust_mode: ADJUST_MODE_FIT
+  line_break: false
+  parent: "prize/board"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  outline_alpha: 1.0
+  shadow_alpha: 1.0
+  overridden_fields: 45
+  overridden_fields: 46
+  template_node_child: true
+  text_leading: 1.0
+  text_tracking: 0.0
+  custom_type: 0
+  enabled: false
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 132.0
+    y: -54.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_BOX
+  blend_mode: BLEND_MODE_ALPHA
+  texture: "backgrounds/acumulado_num_bg"
+  id: "prize/num_bg"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/board"
+  layer: ""
+  inherit_alpha: true
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
+  alpha: 1.0
+  overridden_fields: 46
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  custom_type: 0
+  enabled: false
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 0.0
+    y: 2.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  type: TYPE_TEXT
+  blend_mode: BLEND_MODE_ALPHA
+  text: "42"
+  font: "futura_md_bt_43"
+  id: "prize/num"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  outline {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  adjust_mode: ADJUST_MODE_FIT
+  line_break: false
+  parent: "prize/num_bg"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  outline_alpha: 1.0
+  shadow_alpha: 1.0
+  template_node_child: true
+  text_leading: 1.0
+  text_tracking: 0.0
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 0.0
+    y: 60.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_BOX
+  blend_mode: BLEND_MODE_ALPHA
+  texture: "backgrounds/placa-cinza"
+  id: "prize/title_bg"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/board"
+  layer: ""
+  inherit_alpha: true
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
+  alpha: 1.0
+  overridden_fields: 46
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  custom_type: 0
+  enabled: true
+  visible: false
+  material: ""
+}
+nodes {
+  position {
+    x: 0.0
+    y: -60.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.5
+    y: 1.5
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_BOX
+  blend_mode: BLEND_MODE_ALPHA
+  texture: "titles/titulo_premio_1"
+  id: "prize/title"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize/title_bg"
+  layer: ""
+  inherit_alpha: true
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
+  alpha: 1.0
+  overridden_fields: 1
+  overridden_fields: 3
+  overridden_fields: 9
+  overridden_fields: 46
+  template_node_child: true
+  size_mode: SIZE_MODE_AUTO
+  custom_type: 0
+  enabled: true
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 2.0
+    y: -860.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_TEXT
+  blend_mode: BLEND_MODE_ALPHA
+  text: "R$ 30,00"
+  font: "bebas_kai_60_copy"
+  id: "value"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  outline {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  adjust_mode: ADJUST_MODE_FIT
+  line_break: false
+  parent: "board"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  outline_alpha: 1.0
+  shadow_alpha: 1.0
+  template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  custom_type: 0
+  enabled: false
+  visible: true
+  material: ""
+}
+nodes {
+  position {
+    x: 0.0
+    y: -89.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 300.0
+    y: 800.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_BOX
+  blend_mode: BLEND_MODE_ALPHA
+  texture: ""
+  id: "grid"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_N
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "board"
+  layer: ""
+  inherit_alpha: true
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
+  alpha: 1.0
+  template_node_child: false
+  size_mode: SIZE_MODE_MANUAL
+  custom_type: 0
+  enabled: true
+  visible: false
+  material: ""
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT
+max_nodes: 512

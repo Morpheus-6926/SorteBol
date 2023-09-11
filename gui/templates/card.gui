@@ -1,0 +1,30 @@
+script: ""
+fonts {
+  name: "bebas_kai_78"
+  font: "/assets/fonts/bebas_kai_78.font"
+}
+fonts {
+  name: "futura_md_bt_60"
+  font: "/assets/fonts/futura_md_bt_60.font"
+}
+fonts {
+  name: "futura_md_bt_37"
+  font: "/assets/fonts/futura_md_bt_37.font"
+}
+textures {
+  name: "boards"
+  texture: "/assets/atlas/boards.atlas"
+}
+textures {
+  name: "backgrounds"
+  texture: "/assets/atlas/backgrounds.atlas"
+}
+background_color {
+  x: 0.0
+  y: 0.0
+  z: 0.0
+  w: 0.0
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT
+max_nodes: 512

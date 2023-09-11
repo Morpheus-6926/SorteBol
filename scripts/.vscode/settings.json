@@ -1,0 +1,23 @@
+{
+    "Lua.diagnostics.globals": [
+        "final",
+        "init",
+        "update",
+        "fixed_update",
+        "on_message",
+        "on_input",
+        "on_reload",
+        "gui",
+        "vmath",
+        "timer",
+        "pprint",
+        "msg",
+        "hash"
+    ],
+    "Lua.diagnostics.disable": [
+        "unused-function",
+        "param-type-mismatch",
+        "redundant-parameter",
+        "different-requires"
+    ]
+}
