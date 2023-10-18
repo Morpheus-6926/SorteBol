@@ -95,6 +95,7 @@ function M.update_card(card, info)
     gui.set_text(card["prize_card/value"], "R$".. M.money_mask(tonumber(info.value)))
     for i = 1, 15 do
         gui.set_text(card["prize_card/pos_txt_"..i], info.nums[i][1])
+        gui.set_color(card["prize_card/pos_txt_".. i], vmath.vector3(0))
         gui.set_visible(card["prize_card/pos"..i], info.nums[i][2])
     end
 end

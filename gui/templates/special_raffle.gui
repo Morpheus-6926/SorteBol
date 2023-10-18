@@ -317,7 +317,7 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "R$ 30,00"
+  text: "R$ 70,00"
   font: "bebas_kai_42"
   id: "first_prize"
   xanchor: XANCHOR_NONE
@@ -451,7 +451,7 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "R$ 70,00"
+  text: "R$ 30,00"
   font: "bebas_kai_42"
   id: "third_prize"
   xanchor: XANCHOR_NONE
@@ -487,7 +487,7 @@ nodes {
 }
 nodes {
   position {
-    x: -276.0
+    x: 204.0
     y: -61.0
     z: 0.0
     w: 1.0
@@ -605,7 +605,7 @@ nodes {
 }
 nodes {
   position {
-    x: 204.0
+    x: -276.0
     y: -61.0
     z: 0.0
     w: 1.0

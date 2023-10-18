@@ -31,16 +31,19 @@ local function init_prize_cards_screen(self)
         rows = 3
         scale = 0.5
     end
-    local prefab = gui.get_node("border")
+    local prefab = gui.get_node("prize_card/border")
     gui.set_size(prefab, original_size * scale)
     local grid = self.druid:new_static_grid("board_card_grid", prefab, rows)
     --grid.style.IS_DYNAMIC_NODE_POSES = true
     for c = 1, quant do
         local clone = gui.clone_tree(prefab)
-        gui.set_enabled(clone["border"], true)
+        gui.move_above(clone["prize_card/border"], gui.get_node("prize_board/board"))
+        gui.set_enabled(clone["prize_card/border"], true)
         data.update_card(clone, prize_cards_info[1][c])
-        gui.set_scale(clone["background"], vmath.vector3(1*scale))
-        grid:add(clone["border"])
+        gui.set_scale(clone["prize_card/background"], vmath.vector3(1*scale))
+        gui.play_flipbook(clone["prize_card/pos".. prize_cards_info[1][c].win_num], "quadro_vermelho_cartela")
+        gui.set_color(clone["prize_card/pos_txt_"..prize_cards_info[1][c].win_num], vmath.vector3(1))
+        grid:add(clone["prize_card/border"])
     end
 
     local i = 2
@@ -80,10 +83,13 @@ local function init_prize_cards_screen(self)
             grid.style.IS_DYNAMIC_NODE_POSES = true
             for c = 1, quant do
                 local clone = gui.clone_tree(prefab)
-                gui.set_enabled(clone["border"], true)
-                gui.set_scale(clone["background"], vmath.vector3(1*scale))
+                gui.move_above(clone["prize_card/border"], gui.get_node("prize_board/board"))
+                gui.set_enabled(clone["prize_card/border"], true)
+                gui.set_scale(clone["prize_card/background"], vmath.vector3(1*scale))
                 data.update_card(clone, prize_cards_info[i][c])
-                grid:add(clone["border"])
+                gui.play_flipbook(clone["prize_card/pos".. prize_cards_info[i][c].win_num], "quadro_vermelho_cartela")
+                gui.set_color(clone["prize_card/pos_txt_"..prize_cards_info[i][c].win_num], vmath.vector3(1))
+                grid:add(clone["prize_card/border"])
             end
         end
         i = i + 1

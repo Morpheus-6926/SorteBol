@@ -1206,8 +1206,8 @@ nodes {
 }
 nodes {
   position {
-    x: -757.0
-    y: -173.0
+    x: -71.0
+    y: -174.0
     z: 0.0
     w: 1.0
   }
@@ -1442,7 +1442,7 @@ nodes {
 }
 nodes {
   position {
-    x: -71.0
+    x: -757.0
     y: -174.0
     z: 0.0
     w: 1.0
@@ -4140,7 +4140,7 @@ nodes {
 }
 nodes {
   position {
-    x: -290.0
+    x: 398.0
     y: 195.0
     z: 0.0
     w: 1.0
@@ -4171,7 +4171,7 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "R$ 30,00"
+  text: "R$ 70,00"
   font: "bebas_kai_42"
   id: "raffle1/first_prize"
   xanchor: XANCHOR_NONE
@@ -4280,7 +4280,7 @@ nodes {
 }
 nodes {
   position {
-    x: 398.0
+    x: -290.0
     y: 192.0
     z: 0.0
     w: 1.0
@@ -4311,7 +4311,7 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "R$ 70,00"
+  text: "R$ 30,00"
   font: "bebas_kai_42"
   id: "raffle1/third_prize"
   xanchor: XANCHOR_NONE
@@ -4350,7 +4350,7 @@ nodes {
 }
 nodes {
   position {
-    x: -276.0
+    x: 204.0
     y: -61.0
     z: 0.0
     w: 1.0
@@ -4470,7 +4470,7 @@ nodes {
 }
 nodes {
   position {
-    x: 204.0
+    x: -276.0
     y: -61.0
     z: 0.0
     w: 1.0
@@ -5391,7 +5391,7 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "R$ 30,00"
+  text: "R$ 70,00"
   font: "bebas_kai_42"
   id: "raffle2/first_prize"
   xanchor: XANCHOR_NONE
@@ -5525,7 +5525,7 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "R$ 70,00"
+  text: "R$ 30,00"
   font: "bebas_kai_42"
   id: "raffle2/third_prize"
   xanchor: XANCHOR_NONE
@@ -5561,7 +5561,7 @@ nodes {
 }
 nodes {
   position {
-    x: -276.0
+    x: 204.0
     y: -61.0
     z: 0.0
     w: 1.0
@@ -5679,7 +5679,7 @@ nodes {
 }
 nodes {
   position {
-    x: 204.0
+    x: -276.0
     y: -61.0
     z: 0.0
     w: 1.0
@@ -6599,7 +6599,7 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "R$ 30,00"
+  text: "R$ 70,00"
   font: "bebas_kai_42"
   id: "raffle3/first_prize"
   xanchor: XANCHOR_NONE
@@ -6733,7 +6733,7 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "R$ 70,00"
+  text: "R$ 30,00"
   font: "bebas_kai_42"
   id: "raffle3/third_prize"
   xanchor: XANCHOR_NONE
@@ -6769,7 +6769,7 @@ nodes {
 }
 nodes {
   position {
-    x: -276.0
+    x: 204.0
     y: -61.0
     z: 0.0
     w: 1.0
@@ -6887,7 +6887,7 @@ nodes {
 }
 nodes {
   position {
-    x: 204.0
+    x: -276.0
     y: -61.0
     z: 0.0
     w: 1.0
@@ -7807,7 +7807,7 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "R$ 30,00"
+  text: "R$ 70,00"
   font: "bebas_kai_42"
   id: "raffle4/first_prize"
   xanchor: XANCHOR_NONE
@@ -7941,7 +7941,7 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "R$ 70,00"
+  text: "R$ 30,00"
   font: "bebas_kai_42"
   id: "raffle4/third_prize"
   xanchor: XANCHOR_NONE
@@ -7977,7 +7977,7 @@ nodes {
 }
 nodes {
   position {
-    x: -276.0
+    x: 204.0
     y: -61.0
     z: 0.0
     w: 1.0
@@ -8095,7 +8095,7 @@ nodes {
 }
 nodes {
   position {
-    x: 204.0
+    x: -276.0
     y: -61.0
     z: 0.0
     w: 1.0

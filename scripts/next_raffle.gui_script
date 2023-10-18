@@ -1,11 +1,18 @@
 local druid = require("druid.druid")
 local data = require("scripts.modules.data")
+local json = require("scripts.modules.json")
 
 local lights1
 local lights2
 local a = function ()    end
 
 local b = function ()    end
+
+local response_func = function(_, _, response)
+    -- aki esta oq o servidor devolveu pra vc, é uma table em lua
+    local decoded = json.decode(response.response)
+    pprint(decoded)
+end
 
 local function finish_next_raffle_screen()
     gui.set_enabled(data.screen.next_raffle, false)
@@ -23,16 +30,12 @@ end
 local function update_timer()
     local int_time
     local time = os.date("*t", os.time())
-    time.hour = 15
-    time.min = 16
-    time.sec = 30
+    time.hour = 11
+    time.min = 01
+    time.sec = 00
     int_time = os.time(time) - os.time()
-    print(int_time)
-
     timer.delay(1, true, function (s,h)
         int_time = os.time(time) - os.time()
-        print(os.date("*t", int_time).sec)
-        gui.set_text(gui.get_node("timer_txt"), os.date("%M", int_time) .. ":" .. os.date("%S", int_time))
         if int_time == 0 then
             finish_next_raffle_screen()
             timer.cancel(lights2)
@@ -42,8 +45,11 @@ local function update_timer()
         elseif int_time <= 60 then
             timer.cancel(lights1)
             if not lights2 then
-                lights2 = timer.delay(1, true, b)
+                    lights2 = timer.delay(1, true, b)
             end
+        end
+        if os.date("%M", int_time) then
+            gui.set_text(gui.get_node("timer_txt"), os.date("%M", int_time) .. ":" .. os.date("%S", int_time))
         end
     end)
 end
@@ -68,18 +74,27 @@ local function init_next_raffle_screen()
     end
 
     lights1 = timer.delay(7, true, a)
-    
-    update_rafle_info("raffle1", "0023", 500, "11:33", 10000, 5000, 2500)
+
+    update_rafle_info("raffle1", "0023", 500, "11:33", 2500, 5000, 10000)
     update_timer()
-    
-    
 end
 
 
 function init(self)
     self.druid = druid.new(self)
-    --init_next_raffle_screen()
+    init_next_raffle_screen()
+    local url = "https://v6.sunisis.saturlapi.com/bingo/salas"
 
+    -- isso aki é oq vc vai enviar para o servidor
+    local to_encode = {
+        concurso_id = 14,
+        quantidade_cartelas = 100
+    }
+    local headers = {
+        ["Session-Token"] = "3678e007cc6b820fbf52316b11df45b2ceb0a70f3e62a0ec3c9c5249c951168dc9c037b17fbce904cf121c0d6d5404e673348162b83d2677c2a03c140b6c6ea053c92f23e1f34e17c6709f767cb84838b9d86dbfe5ed7c43961871c97b2dac6f90a19fce37a96950b7816e0f380bb6b29906e7e1555c02148a4f07f5e5f96198bd776704eece9d03032a69a082f0665e89a744d0153a9c3d8d479619b1c78baaff34920abac0ab714a9107c4c930749470c06379b69feb40c1ce6886b488280ccb76fc6fc18cac12eb71ed1635e18ca10484ad14030b7a137b93d71dceed8d435ae20cb13d912c439d0a4109284ae0fa92ddbaa28ec5ea217e5ee656978da526a66f96b0e891cc9aa577940c19817266ec30444f144e73fd790d28dccdd6dac3fb83978251624b513521135cc549fba9c2a026b5437b7bc0ef555ea38cd47006c913cec75fba81295101ad6d714edcc40792571af060c68a6dfae93211375f41b4b50aead7429db6b4a872d7b01bec28129270894bf4db8bb25880329128866b2cf3b72ddf692bfb9f55963837c391341acf89a4b21274b77a92396fd0bfedf29048"
+    }
+    -- fazendo a requisicao para o servidor
+    http.request(url, "GET", response_func, headers)--, json.encode(to_encode))
 end
 
 function final(self)

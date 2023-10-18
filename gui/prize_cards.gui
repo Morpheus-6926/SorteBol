@@ -89,65 +89,6 @@ nodes {
 }
 nodes {
   position {
-    x: 15.0
-    y: 4.0
-    z: 0.0
-    w: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  size {
-    x: 200.0
-    y: 100.0
-    z: 0.0
-    w: 1.0
-  }
-  color {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  type: TYPE_BOX
-  blend_mode: BLEND_MODE_ALPHA
-  texture: ""
-  id: "board_card_grid"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
-  adjust_mode: ADJUST_MODE_FIT
-  parent: "prize_cards"
-  layer: ""
-  inherit_alpha: true
-  slice9 {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 0.0
-  }
-  clipping_mode: CLIPPING_MODE_NONE
-  clipping_visible: true
-  clipping_inverted: false
-  alpha: 1.0
-  template_node_child: false
-  size_mode: SIZE_MODE_AUTO
-  custom_type: 0
-  enabled: true
-  visible: false
-  material: ""
-}
-nodes {
-  position {
     x: 14.0
     y: 404.0
     z: 0.0
@@ -2672,9 +2613,68 @@ nodes {
 }
 nodes {
   position {
-    x: -16.0
-    y: -10.0
+    x: 15.0
+    y: 4.0
     z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_BOX
+  blend_mode: BLEND_MODE_ALPHA
+  texture: ""
+  id: "board_card_grid"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "prize_cards"
+  layer: ""
+  inherit_alpha: true
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
+  alpha: 1.0
+  template_node_child: false
+  size_mode: SIZE_MODE_AUTO
+  custom_type: 0
+  enabled: true
+  visible: false
+  material: ""
+}
+nodes {
+  position {
+    x: 0.0
+    y: 0.0
+    z: 5.0
     w: 1.0
   }
   rotation {
@@ -2746,12 +2746,12 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: ""
-  id: "border"
+  id: "prize_card/border"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
-  parent: "prize_cards"
+  parent: "prize_card"
   layer: ""
   inherit_alpha: true
   slice9 {
@@ -2764,7 +2764,7 @@ nodes {
   clipping_visible: true
   clipping_inverted: false
   alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   size_mode: SIZE_MODE_MANUAL
   custom_type: 0
   enabled: false
@@ -2805,12 +2805,12 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: "boards/cartela"
-  id: "background"
+  id: "prize_card/background"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
-  parent: "border"
+  parent: "prize_card/border"
   layer: ""
   inherit_alpha: true
   slice9 {
@@ -2823,7 +2823,7 @@ nodes {
   clipping_visible: true
   clipping_inverted: false
   alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   size_mode: SIZE_MODE_MANUAL
   custom_type: 0
   enabled: true
@@ -2865,7 +2865,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "PDV GREYCE KELLY"
   font: "futura_md_bt_37"
-  id: "title"
+  id: "prize_card/title"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -2883,13 +2883,13 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  parent: "background"
+  parent: "prize_card/background"
   layer: ""
   inherit_alpha: true
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   text_leading: 1.0
   text_tracking: 0.0
   custom_type: 0
@@ -2932,7 +2932,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "00004"
   font: "futura_md_bt_60"
-  id: "id"
+  id: "prize_card/id"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -2950,13 +2950,13 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  parent: "background"
+  parent: "prize_card/background"
   layer: ""
   inherit_alpha: true
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   text_leading: 1.0
   text_tracking: 0.0
   custom_type: 0
@@ -2998,12 +2998,12 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: "boards/quadro_azul_cartela"
-  id: "pos1"
+  id: "prize_card/pos1"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
-  parent: "background"
+  parent: "prize_card/background"
   layer: ""
   inherit_alpha: true
   slice9 {
@@ -3016,7 +3016,7 @@ nodes {
   clipping_visible: true
   clipping_inverted: false
   alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   size_mode: SIZE_MODE_MANUAL
   custom_type: 0
   enabled: true
@@ -3058,7 +3058,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "01"
   font: "futura_md_bt_60"
-  id: "pos_txt_1"
+  id: "prize_card/pos_txt_1"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -3076,13 +3076,13 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  parent: "pos1"
+  parent: "prize_card/pos1"
   layer: ""
   inherit_alpha: true
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   text_leading: 1.0
   text_tracking: 0.0
   custom_type: 0
@@ -3124,12 +3124,12 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: "boards/quadro_azul_cartela"
-  id: "pos2"
+  id: "prize_card/pos2"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
-  parent: "background"
+  parent: "prize_card/background"
   layer: ""
   inherit_alpha: true
   slice9 {
@@ -3142,7 +3142,7 @@ nodes {
   clipping_visible: true
   clipping_inverted: false
   alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   size_mode: SIZE_MODE_MANUAL
   custom_type: 0
   enabled: true
@@ -3184,7 +3184,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "05"
   font: "futura_md_bt_60"
-  id: "pos_txt_2"
+  id: "prize_card/pos_txt_2"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -3202,13 +3202,13 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  parent: "pos2"
+  parent: "prize_card/pos2"
   layer: ""
   inherit_alpha: true
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   text_leading: 1.0
   text_tracking: 0.0
   custom_type: 0
@@ -3250,12 +3250,12 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: "boards/quadro_azul_cartela"
-  id: "pos3"
+  id: "prize_card/pos3"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
-  parent: "background"
+  parent: "prize_card/background"
   layer: ""
   inherit_alpha: true
   slice9 {
@@ -3268,7 +3268,7 @@ nodes {
   clipping_visible: true
   clipping_inverted: false
   alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   size_mode: SIZE_MODE_MANUAL
   custom_type: 0
   enabled: true
@@ -3310,7 +3310,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "05"
   font: "futura_md_bt_60"
-  id: "pos_txt_3"
+  id: "prize_card/pos_txt_3"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -3328,13 +3328,13 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  parent: "pos3"
+  parent: "prize_card/pos3"
   layer: ""
   inherit_alpha: true
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   text_leading: 1.0
   text_tracking: 0.0
   custom_type: 0
@@ -3376,12 +3376,12 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: "boards/quadro_azul_cartela"
-  id: "pos4"
+  id: "prize_card/pos4"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
-  parent: "background"
+  parent: "prize_card/background"
   layer: ""
   inherit_alpha: true
   slice9 {
@@ -3394,7 +3394,7 @@ nodes {
   clipping_visible: true
   clipping_inverted: false
   alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   size_mode: SIZE_MODE_MANUAL
   custom_type: 0
   enabled: true
@@ -3436,7 +3436,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "05"
   font: "futura_md_bt_60"
-  id: "pos_txt_4"
+  id: "prize_card/pos_txt_4"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -3454,13 +3454,13 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  parent: "pos4"
+  parent: "prize_card/pos4"
   layer: ""
   inherit_alpha: true
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   text_leading: 1.0
   text_tracking: 0.0
   custom_type: 0
@@ -3502,12 +3502,12 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: "boards/quadro_azul_cartela"
-  id: "pos5"
+  id: "prize_card/pos5"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
-  parent: "background"
+  parent: "prize_card/background"
   layer: ""
   inherit_alpha: true
   slice9 {
@@ -3520,7 +3520,7 @@ nodes {
   clipping_visible: true
   clipping_inverted: false
   alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   size_mode: SIZE_MODE_MANUAL
   custom_type: 0
   enabled: true
@@ -3562,7 +3562,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "05"
   font: "futura_md_bt_60"
-  id: "pos_txt_5"
+  id: "prize_card/pos_txt_5"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -3580,13 +3580,13 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  parent: "pos5"
+  parent: "prize_card/pos5"
   layer: ""
   inherit_alpha: true
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   text_leading: 1.0
   text_tracking: 0.0
   custom_type: 0
@@ -3628,12 +3628,12 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: "boards/quadro_azul_cartela"
-  id: "pos6"
+  id: "prize_card/pos6"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
-  parent: "background"
+  parent: "prize_card/background"
   layer: ""
   inherit_alpha: true
   slice9 {
@@ -3646,7 +3646,7 @@ nodes {
   clipping_visible: true
   clipping_inverted: false
   alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   size_mode: SIZE_MODE_MANUAL
   custom_type: 0
   enabled: true
@@ -3688,7 +3688,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "05"
   font: "futura_md_bt_60"
-  id: "pos_txt_6"
+  id: "prize_card/pos_txt_6"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -3706,13 +3706,13 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  parent: "pos6"
+  parent: "prize_card/pos6"
   layer: ""
   inherit_alpha: true
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   text_leading: 1.0
   text_tracking: 0.0
   custom_type: 0
@@ -3754,12 +3754,12 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: "boards/quadro_azul_cartela"
-  id: "pos7"
+  id: "prize_card/pos7"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
-  parent: "background"
+  parent: "prize_card/background"
   layer: ""
   inherit_alpha: true
   slice9 {
@@ -3772,7 +3772,7 @@ nodes {
   clipping_visible: true
   clipping_inverted: false
   alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   size_mode: SIZE_MODE_MANUAL
   custom_type: 0
   enabled: true
@@ -3814,7 +3814,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "05"
   font: "futura_md_bt_60"
-  id: "pos_txt_7"
+  id: "prize_card/pos_txt_7"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -3832,13 +3832,13 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  parent: "pos7"
+  parent: "prize_card/pos7"
   layer: ""
   inherit_alpha: true
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   text_leading: 1.0
   text_tracking: 0.0
   custom_type: 0
@@ -3880,12 +3880,12 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: "boards/quadro_azul_cartela"
-  id: "pos8"
+  id: "prize_card/pos8"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
-  parent: "background"
+  parent: "prize_card/background"
   layer: ""
   inherit_alpha: true
   slice9 {
@@ -3898,7 +3898,7 @@ nodes {
   clipping_visible: true
   clipping_inverted: false
   alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   size_mode: SIZE_MODE_MANUAL
   custom_type: 0
   enabled: true
@@ -3940,7 +3940,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "05"
   font: "futura_md_bt_60"
-  id: "pos_txt_8"
+  id: "prize_card/pos_txt_8"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -3958,13 +3958,13 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  parent: "pos8"
+  parent: "prize_card/pos8"
   layer: ""
   inherit_alpha: true
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   text_leading: 1.0
   text_tracking: 0.0
   custom_type: 0
@@ -4006,12 +4006,12 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: "boards/quadro_azul_cartela"
-  id: "pos9"
+  id: "prize_card/pos9"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
-  parent: "background"
+  parent: "prize_card/background"
   layer: ""
   inherit_alpha: true
   slice9 {
@@ -4024,7 +4024,7 @@ nodes {
   clipping_visible: true
   clipping_inverted: false
   alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   size_mode: SIZE_MODE_MANUAL
   custom_type: 0
   enabled: true
@@ -4066,7 +4066,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "05"
   font: "futura_md_bt_60"
-  id: "pos_txt_9"
+  id: "prize_card/pos_txt_9"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -4084,13 +4084,13 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  parent: "pos9"
+  parent: "prize_card/pos9"
   layer: ""
   inherit_alpha: true
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   text_leading: 1.0
   text_tracking: 0.0
   custom_type: 0
@@ -4132,12 +4132,12 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: "boards/quadro_azul_cartela"
-  id: "pos10"
+  id: "prize_card/pos10"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
-  parent: "background"
+  parent: "prize_card/background"
   layer: ""
   inherit_alpha: true
   slice9 {
@@ -4150,7 +4150,7 @@ nodes {
   clipping_visible: true
   clipping_inverted: false
   alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   size_mode: SIZE_MODE_MANUAL
   custom_type: 0
   enabled: true
@@ -4192,7 +4192,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "05"
   font: "futura_md_bt_60"
-  id: "pos_txt_10"
+  id: "prize_card/pos_txt_10"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -4210,13 +4210,13 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  parent: "pos10"
+  parent: "prize_card/pos10"
   layer: ""
   inherit_alpha: true
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   text_leading: 1.0
   text_tracking: 0.0
   custom_type: 0
@@ -4258,12 +4258,12 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: "boards/quadro_azul_cartela"
-  id: "pos11"
+  id: "prize_card/pos11"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
-  parent: "background"
+  parent: "prize_card/background"
   layer: ""
   inherit_alpha: true
   slice9 {
@@ -4276,7 +4276,7 @@ nodes {
   clipping_visible: true
   clipping_inverted: false
   alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   size_mode: SIZE_MODE_MANUAL
   custom_type: 0
   enabled: true
@@ -4318,7 +4318,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "05"
   font: "futura_md_bt_60"
-  id: "pos_txt_11"
+  id: "prize_card/pos_txt_11"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -4336,13 +4336,13 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  parent: "pos11"
+  parent: "prize_card/pos11"
   layer: ""
   inherit_alpha: true
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   text_leading: 1.0
   text_tracking: 0.0
   custom_type: 0
@@ -4384,12 +4384,12 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: "boards/quadro_azul_cartela"
-  id: "pos12"
+  id: "prize_card/pos12"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
-  parent: "background"
+  parent: "prize_card/background"
   layer: ""
   inherit_alpha: true
   slice9 {
@@ -4402,7 +4402,7 @@ nodes {
   clipping_visible: true
   clipping_inverted: false
   alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   size_mode: SIZE_MODE_MANUAL
   custom_type: 0
   enabled: true
@@ -4444,7 +4444,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "05"
   font: "futura_md_bt_60"
-  id: "pos_txt_12"
+  id: "prize_card/pos_txt_12"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -4462,13 +4462,13 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  parent: "pos12"
+  parent: "prize_card/pos12"
   layer: ""
   inherit_alpha: true
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   text_leading: 1.0
   text_tracking: 0.0
   custom_type: 0
@@ -4510,12 +4510,12 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: "boards/quadro_azul_cartela"
-  id: "pos13"
+  id: "prize_card/pos13"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
-  parent: "background"
+  parent: "prize_card/background"
   layer: ""
   inherit_alpha: true
   slice9 {
@@ -4528,7 +4528,7 @@ nodes {
   clipping_visible: true
   clipping_inverted: false
   alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   size_mode: SIZE_MODE_MANUAL
   custom_type: 0
   enabled: true
@@ -4570,7 +4570,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "05"
   font: "futura_md_bt_60"
-  id: "pos_txt_13"
+  id: "prize_card/pos_txt_13"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -4588,13 +4588,13 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  parent: "pos13"
+  parent: "prize_card/pos13"
   layer: ""
   inherit_alpha: true
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   text_leading: 1.0
   text_tracking: 0.0
   custom_type: 0
@@ -4636,12 +4636,12 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: "boards/quadro_azul_cartela"
-  id: "pos14"
+  id: "prize_card/pos14"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
-  parent: "background"
+  parent: "prize_card/background"
   layer: ""
   inherit_alpha: true
   slice9 {
@@ -4654,7 +4654,7 @@ nodes {
   clipping_visible: true
   clipping_inverted: false
   alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   size_mode: SIZE_MODE_MANUAL
   custom_type: 0
   enabled: true
@@ -4696,7 +4696,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "05"
   font: "futura_md_bt_60"
-  id: "pos_txt_14"
+  id: "prize_card/pos_txt_14"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -4714,13 +4714,13 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  parent: "pos14"
+  parent: "prize_card/pos14"
   layer: ""
   inherit_alpha: true
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   text_leading: 1.0
   text_tracking: 0.0
   custom_type: 0
@@ -4762,12 +4762,12 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: "boards/quadro_azul_cartela"
-  id: "pos15"
+  id: "prize_card/pos15"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
-  parent: "background"
+  parent: "prize_card/background"
   layer: ""
   inherit_alpha: true
   slice9 {
@@ -4780,7 +4780,7 @@ nodes {
   clipping_visible: true
   clipping_inverted: false
   alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   size_mode: SIZE_MODE_MANUAL
   custom_type: 0
   enabled: true
@@ -4822,7 +4822,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "05"
   font: "futura_md_bt_60"
-  id: "pos_txt_15"
+  id: "prize_card/pos_txt_15"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -4840,13 +4840,13 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  parent: "pos15"
+  parent: "prize_card/pos15"
   layer: ""
   inherit_alpha: true
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   text_leading: 1.0
   text_tracking: 0.0
   custom_type: 0
@@ -4889,7 +4889,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "R$ 30,00!"
   font: "bebas_kai_78"
-  id: "value"
+  id: "prize_card/value"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -4907,13 +4907,13 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  parent: "background"
+  parent: "prize_card/background"
   layer: ""
   inherit_alpha: true
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
-  template_node_child: false
+  template_node_child: true
   text_leading: 1.0
   text_tracking: 0.0
   custom_type: 0

@@ -12,12 +12,14 @@
         "timer",
         "pprint",
         "msg",
-        "hash"
+        "hash",
+        "http"
     ],
     "Lua.diagnostics.disable": [
         "unused-function",
         "param-type-mismatch",
         "redundant-parameter",
-        "different-requires"
+        "different-requires",
+        "undefined-field"
     ]
 }

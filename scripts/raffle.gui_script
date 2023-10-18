@@ -24,7 +24,7 @@ local function update_first_cards()
 end
 
 local function init_first_cards()
-    local prefab = gui.get_node("border")
+    local prefab = gui.get_node("prize_card/border")
     local cards = {}
     for i = 1, 4 do
         cards[i] = gui.clone_tree(prefab)
@@ -100,6 +100,7 @@ local function update_cards_list()
         for c = 1, 15 do
             if cards[i].nums[c][1] == balls[data.sequence] then
                 cards[i].nums[c][2] = true
+                cards[i].win_num = c
             end
         end
     end
@@ -155,11 +156,12 @@ local function generete_data()
             title = "DONOR "..i,
             id = string.format("%05d", i),
             value = 0,
-            nums = {}
+            nums = {},
+            win_num = 0,
         }
         in_use = {}
+        local n
         for c = 1, 15 do
-            local n
             repeat
                 n = math.random(1, 90)
             until in_use[n] == nil
@@ -215,7 +217,6 @@ function init(self)
     data.raffle.board_coup_info_grid = self.druid:new_static_grid("board_coup_info_grid", gui.get_node("coupon_info/pivot"), 1)
     data.raffle.board_coup_info_grid.style.IS_DYNAMIC_NODE_POSES = true
     init_first_cards()
-    init_raffle_screen()
 end
 
 function final(self)
